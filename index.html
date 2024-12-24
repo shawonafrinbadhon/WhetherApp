@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Weather App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link your external CSS -->
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-primary text-white py-4">
+    <div class="container text-center">
+        <img src="assets/images/logo.jpg" alt="Country Weather App Logo" class="mb-3 rounded-circle" style="max-width: 100px;">
+      <h1>Country Weather App</h1>
+      <p>Your go-to app for checking weather forecasts by country.</p>
+    </div>
+  </header>
+
+  <div class="container mt-4">
+    <div class="mb-4 text-center">
+      <input type="text" id="search" class="form-control w-50 d-inline" placeholder="Enter a country name">
+      <button id="searchBtn" class="btn btn-primary">Search</button>
+    </div>
+
+    <div class="spinner text-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Cards will be dynamically populated here -->
+    <div id="countryResults" class="row"></div>
+      <!-- Country Weather Cards will appear here -->
+    </div>
+  </div>
+
+<!-- Weather Modal -->
+<div class="modal fade" id="weatherModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="weatherModalLabel">Weather Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="weatherDetails"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- More Details Modal -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detailsModalLabel">More Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="detailsBody">
+          <!-- Country details will be dynamically populated here -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p>&copy; 2024 Country Weather App. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
